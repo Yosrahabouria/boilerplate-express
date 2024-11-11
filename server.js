@@ -3,8 +3,11 @@
  * the verification process may break
  * ***************************************************/
 
-import { listen } from './myApp';  // Import the app from myApp.js
+//import { listen } from './myApp';  // Import the app from myApp.js
 import express from 'express';
+
+import myApp from './myApp.js';
+
 const app = express();
 
 if (!process.env.DISABLE_XORIGIN) {
