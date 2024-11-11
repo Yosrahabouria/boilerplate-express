@@ -3,7 +3,6 @@
  * the verification process may break
  * ***************************************************/
 
-import bGround from 'fcc-express-bground';
 import { listen } from './myApp';  // Import the app from myApp.js
 import express from 'express';
 const app = express();
