@@ -3,9 +3,9 @@
  * the verification process may break
  * ***************************************************/
 
-const bGround = require('fcc-express-bground');
-const myApp = require('./myApp');  // Import the app from myApp.js
-const express = require('express');
+import bGround from 'fcc-express-bground';
+import { listen } from './myApp';  // Import the app from myApp.js
+import express from 'express';
 const app = express();
 
 if (!process.env.DISABLE_XORIGIN) {
@@ -23,7 +23,7 @@ if (!process.env.DISABLE_XORIGIN) {
 
 // Use the app from myApp.js
 const port = process.env.PORT || 3000;
-myApp.listen(port, () => {
+listen(port, () => {
   console.log(`Node is listening on port ${port}...`);
 });
 
