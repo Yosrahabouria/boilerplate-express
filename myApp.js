@@ -1,30 +1,10 @@
 let express = require('express');
+let path = require('path');  // Include path module to handle file paths
 let app = express();
-///console.log("Hello World");
+
+// Serve the index.html file when accessing the root URL
 app.get("/", function(req, res) {
-  res.sendFile(`${__dirname}/public/views/index.html`);
+  res.sendFile(path.join(__dirname, 'public', 'views', 'index.html'));  // Use path.join for platform-independent paths
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- module.exports = app;
